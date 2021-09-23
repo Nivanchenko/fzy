@@ -8,7 +8,7 @@
             "name": "Отладка 1Script",
             "type": "oscript",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceRoot}/examples/example.os",
             "args": [],
             "cwd": "${workspaceRoot}",
             "env": {},
