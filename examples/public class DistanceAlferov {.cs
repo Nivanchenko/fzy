@@ -105,7 +105,7 @@ public class DistanceAlferov {
             Word croppedSource = new Word();
             int length = Math.Min(source.Text.Length, target.Text.Length + 1);
             for (int i = 0; i <= source.Text.Length - length; i++) {
-                croppedSource.Text = source.Text.Substring(i, length);   ////////////////////
+                croppedSource.Text = source.Text.Substring(i, length);   
                 croppedSource.Codes = source.Codes.Skip(i).Take(length).ToList();
                 minDistance = Math.Min(minDistance, LevenshteinDistance(croppedSource, target, croppedSource.Text.Length == source.Text.Length, translation) + (i * 2 / 10.0));
             }
