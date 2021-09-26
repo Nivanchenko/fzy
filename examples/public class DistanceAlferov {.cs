@@ -158,6 +158,7 @@ public class DistanceAlferov {
                 resultWeight = 2;
             else
                 resultWeight = nearKeys.Contains(search.Codes[searchPosition]) ? 1 : 2;
+            
             List<char> phoneticGroups;
             if (PhoneticGroupsRus.TryGetValue(search.Text[searchPosition], out phoneticGroups))
                 resultWeight = Math.Min(resultWeight, phoneticGroups.Contains(source.Text[sourcePosition]) ? 1 : 2);
