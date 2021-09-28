@@ -134,13 +134,16 @@
 	КонецЦикла;
 КонецФункции
 
-Функция score(needle, haystack, case_sensitive) Экспорт
+Функция score(needle, haystack, case_sensitive = Ложь) Экспорт
 	_n = СтрДлина(needle);
 	_m = СтрДлина(haystack);
   
 	Если _n = 0 ИЛИ _m = 0 ИЛИ _m > MATCH_MAX_LENGTH ИЛИ _n > _m Тогда
 	  Возврат SCORE_MIN;
-	ИначеЕсли _n = _m Тогда
+	ИначеЕсли _n = _m 
+		И ((case_sensitive = Истина и needle = haystack) ИЛИ
+			(case_sensitive = Ложь и НРег(needle) = НРег(haystack)))
+		Тогда
 	  Возврат SCORE_MAX;
 	Иначе
 	  D = Новый Соответствие();
@@ -150,7 +153,7 @@
 	КонецЕсли;
 КонецФункции
 
-Функция positions(needle, haystack, case_sensitive) Экспорт
+Функция positions(needle, haystack, case_sensitive = Ложь) Экспорт
 	_n = СтрДлина(needle);
 	_m = СтрДлина(haystack);
   
