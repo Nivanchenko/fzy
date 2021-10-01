@@ -1,4 +1,4 @@
-# oscript-fzf
+# oscript-fzy
 
 Данная библиотека реализация алгоритма (https://github.com/jhawthorn/fzy) перенесенная на OneScript.
 
