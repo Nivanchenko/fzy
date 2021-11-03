@@ -7,7 +7,7 @@
 ## Установка
 
 ```cmd
-opm install -f .\oscript-fzf-<<текущая версия>>.ospx
+opm install -f .\oscript-fzy-<<текущая версия>>.ospx
 ```
 
 Подключение:
