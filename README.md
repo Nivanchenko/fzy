@@ -7,7 +7,7 @@
 ## Установка
 
 ```cmd
-opm install -f .\fzy-<<текущая версия>>.ospx
+opm install fzy
 ```
 
 Подключение:
